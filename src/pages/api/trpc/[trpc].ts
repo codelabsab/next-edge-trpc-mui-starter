@@ -20,11 +20,12 @@ const appRouter = router({
       // This is what you're returning to your client
       setTimeout(() => {
         console.log("inside query route");
-        return {
-          text: `hello ${input?.name ?? "world"}`,
-          // 💡 Tip: Try adding a new property here and see it propagate to the client straight-away
-        };
       }, 60000);
+      console.log("done with timeout");
+      return {
+        text: `hello ${input?.name ?? "world"}`,
+        // 💡 Tip: Try adding a new property here and see it propagate to the client straight-away
+      };
     }),
   // 💡 Tip: Try adding a new procedure here and see if you can use it in the client!
   // getUser: t.procedure.query(() => {
